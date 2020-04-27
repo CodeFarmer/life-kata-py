@@ -5,11 +5,6 @@ from life import *
 def emptyArena():
     return Arena()
 
-
-def test_EmptyArena():
-    assert emptyArena() != None
-
-
 def test_EmptyArenaCellsNotAlive():
     assert not emptyArena().alive(0, 0)
 
@@ -19,19 +14,6 @@ def test_EmptyArenaCellsCanBeMadeAlive():
     a.setAlive(0, 0)
     assert a.alive(0, 0)
     assert not a.alive(0, 1)
-
-
-def test_EmptyArenaCellsCanBeMadeDead():
-    a = emptyArena()
-    a.setAlive(0, 0)
-    a.setDead(0, 0)
-    assert not a.alive(0, 0)
-
-
-def test_AlreadyDeadCellsCanBeMadeDead():
-    a = emptyArena()
-    a.setDead(0, 0)
-    assert not a.alive(0, 0)
 
 
 def stringArena(alist):
@@ -50,6 +32,7 @@ def threeSquareDiagonal():
     return stringArena(['X..',
                         '.X.',
                         '..X'])
+
 
 def test_StringArena():
     a = threeSquareDiagonal()

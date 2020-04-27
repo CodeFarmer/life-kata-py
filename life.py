@@ -15,11 +15,7 @@ class Arena:
     def setAlive(self, x, y):
         self._aliveSet.add((x, y))
 
-    def setDead(self, x, y):
-        point = (x, y)
-        if point in self._aliveSet:
-            self._aliveSet.remove(point)
-
+        
     def countNeighbours(self, x, y):
         count = 0
         
