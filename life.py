@@ -63,17 +63,3 @@ class Arena:
         return isinstance(other, Arena) and self._aliveSet == other._aliveSet
 
 
-def emptyArena():
-    return Arena()
-
-
-def stringArena(alist):
-
-    a = Arena()
-    
-    for y in range(len(alist)):
-        for x in range(len(alist[y])):
-            if not alist[y][x] == '.':
-                a.setAlive(x, y)
-
-    return a
